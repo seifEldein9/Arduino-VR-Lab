@@ -3,12 +3,12 @@ using UnityEngine.UI;
 
 public class InventoryMenu : MonoBehaviour
 {
-    public GameObject inventoryPanel; // لوحة القائمة
-    private bool isMenuOpen = false;  // حالة القائمة
+    public GameObject inventoryPanel; 
+    private bool isMenuOpen = false;  
 
     void Start()
     {
-        // التأكد من أن القائمة مغلقة في البداية
+      
         inventoryPanel.SetActive(false);
     }
 

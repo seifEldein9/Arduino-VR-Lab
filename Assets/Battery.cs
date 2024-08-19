@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Battery : MonoBehaviour
 {
-    public float voltage = 5.0f;  // الجهد الكهربائي للبطارية
+    public float voltage = 5.0f; 
 
-    public Transform positiveTerminal;  // القطب الموجب
-    public Transform negativeTerminal;  // القطب السالب
+    public Transform positiveTerminal;  
+    public Transform negativeTerminal;  
 }

@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 public class ConnectSquares : MonoBehaviour
 {
-    public GameObject mainSquare;  // المربع الرئيسي
-    public GameObject[] connectedSquares;  // المربعات المتصلة
-    private bool isDragging = false;  // حالة السحب
-    private LineRenderer currentLineRenderer;  // لرسم الخط الحالي
-    private List<LineRenderer> lines = new List<LineRenderer>();  // قائمة بالخطوط المرسومة
+    public GameObject mainSquare;  
+    public GameObject[] connectedSquares;  
+    private bool isDragging = false; 
+    private LineRenderer currentLineRenderer;  
+    private List<LineRenderer> lines = new List<LineRenderer>();  
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // عند النقر على زر الماوس الأيسر
+        if (Input.GetMouseButtonDown(0)) 
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -20,13 +20,13 @@ public class ConnectSquares : MonoBehaviour
             {
                 if (hit.transform.gameObject == mainSquare)
                 {
-                    isDragging = true;  // بدء السحب
-                    CreateLineRenderer();  // إنشاء LineRenderer جديد للخط الجديد
+                    isDragging = true;  
+                    CreateLineRenderer();  
                 }
             }
         }
 
-        if (Input.GetMouseButton(0) && isDragging) // أثناء السحب
+        if (Input.GetMouseButton(0) && isDragging) 
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Plane plane = new Plane(Vector3.up, 0);
@@ -39,7 +39,7 @@ public class ConnectSquares : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonUp(0) && isDragging) // عند رفع الزر الأيسر للماوس
+        if (Input.GetMouseButtonUp(0) && isDragging) 
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -50,19 +50,19 @@ public class ConnectSquares : MonoBehaviour
                 {
                     if (hit.transform.gameObject == square)
                     {
-                        currentLineRenderer.SetPosition(1, square.transform.position);  // رسم الخط إلى المربع المتصل
+                        currentLineRenderer.SetPosition(1, square.transform.position);  
                         break;
                     }
                 }
             }
 
-            isDragging = false;  // إنهاء السحب
+            isDragging = false;  
         }
     }
 
     void CreateLineRenderer()
     {
-        // إنشاء LineRenderer جديد وإعداده
+   
         GameObject lineObject = new GameObject("Line");
         currentLineRenderer = lineObject.AddComponent<LineRenderer>();
         currentLineRenderer.startWidth = 0.05f;
@@ -71,7 +71,7 @@ public class ConnectSquares : MonoBehaviour
         currentLineRenderer.useWorldSpace = true;
         currentLineRenderer.material = new Material(Shader.Find("Sprites/Default"));
         
-        // إضافة الخط الجديد إلى قائمة الخطوط
+   
         lines.Add(currentLineRenderer);
     }
 }

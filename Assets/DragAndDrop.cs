@@ -3,8 +3,8 @@ using UnityEngine.EventSystems;
 
 public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    public GameObject prefabToInstantiate; // الـ Prefab المراد إنشاؤه عند الإفلات
-    public GameObject placementSurface; // السطح الذي يسمح بالإفلات عليه
+    public GameObject prefabToInstantiate; 
+    public GameObject placementSurface; 
 
     private Vector3 startPosition;
     private Transform originalParent;
@@ -13,7 +13,7 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     {
         startPosition = transform.position;
         originalParent = transform.parent;
-        transform.SetParent(transform.root); // نفصل العنصر عن التسلسل الهيكلي لتجنب مشاكل UI
+        transform.SetParent(transform.root); 
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -23,24 +23,24 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        transform.SetParent(originalParent); // إعادة العنصر لمكانه
+        transform.SetParent(originalParent); 
         if (IsPointerOverPlacementSurface())
         {
             PlaceObject();
         }
         else
         {
-            transform.position = startPosition; // إعادة العنصر لمكانه إذا لم يكن هناك وضع
+            transform.position = startPosition; 
         }
     }
 
     void UpdateDragPosition()
     {
         Vector3 mousePosition = Input.mousePosition;
-        mousePosition.z = 10f; // تعيين البُعد Z ليكون أمام الكاميرا
+        mousePosition.z = 10f;
         Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
 
-        // تحديث موقع القطعة بناءً على موقع الماوس على السطح
+        
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
@@ -60,7 +60,7 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             mousePosition.z = 10f;
             Vector3 spawnPosition = Camera.main.ScreenToWorldPoint(mousePosition);
 
-            // تعديل موضع الإسقاط بحيث يتم على سطح الطاولة فقط
+    
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
@@ -77,7 +77,7 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     bool IsPointerOverPlacementSurface()
     {
-        // إجراء Raycast للتحقق مما إذا كان الماوس فوق السطح الصحيح
+       
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))

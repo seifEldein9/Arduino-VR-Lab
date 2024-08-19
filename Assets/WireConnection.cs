@@ -2,19 +2,19 @@ using UnityEngine;
 
 public class WireConnection : MonoBehaviour
 {
-    public Transform positiveTerminal; // القطب الموجب للبطارية
-    public Transform negativeTerminal; // القطب السالب للبطارية
-    public Transform ledPositivePin;   // الطرف الموجب للـ LED
-    public Transform ledNegativePin;   // الطرف السالب للـ LED
+    public Transform positiveTerminal; 
+    public Transform negativeTerminal;  
+    public Transform ledPositivePin;    
+    public Transform ledNegativePin;    
 
-    private LineRenderer currentWire;  // السلك الحالي الذي يتم رسمه
-    private bool isDrawing = false;    // حالة الرسم
+    private LineRenderer currentWire;   
+    private bool isDrawing = false;     
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            // بدء رسم السلك عند النقر على أحد أطراف البطارية
+           
             if (CheckForDrawingStart(positiveTerminal) || CheckForDrawingStart(negativeTerminal))
             {
                 isDrawing = true;
@@ -23,7 +23,7 @@ public class WireConnection : MonoBehaviour
 
         if (isDrawing)
         {
-            // تحديث موقع نهاية السلك إلى موضع الماوس
+         
             Vector3 mousePosition = GetMouseWorldPosition();
             if (currentWire != null)
             {
@@ -33,7 +33,7 @@ public class WireConnection : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0) && isDrawing)
         {
-            // إتمام الرسم عند الإفلات والتحقق من التوصيل
+            
             StopDrawingWire(ledPositivePin, ledNegativePin);
             isDrawing = false;
         }
@@ -63,12 +63,12 @@ public class WireConnection : MonoBehaviour
         {
             if (hit.transform == pin1 || hit.transform == pin2)
             {
-                // إذا كان الطرف المناسب متصلاً، أتم الرسم
+           
                 currentWire.SetPosition(1, hit.transform.position);
             }
             else
             {
-                // حذف السلك إذا لم يتم توصيله بالطرف المناسب
+            
                 Destroy(currentWire.gameObject);
             }
         }
@@ -89,7 +89,7 @@ public class WireConnection : MonoBehaviour
     Vector3 GetMouseWorldPosition()
     {
         Vector3 mousePosition = Input.mousePosition;
-        mousePosition.z = 10f; // قم بتعيين بُعد Z ليكون أمام الكاميرا
+        mousePosition.z = 10f;  
         return Camera.main.ScreenToWorldPoint(mousePosition);
     }
 }
