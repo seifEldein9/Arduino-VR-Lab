@@ -2,12 +2,12 @@
 
 public class LightControl : MonoBehaviour
 {
-    public Light controlledLight; // مصدر الضوء الذي نريد التحكم فيه
-    private bool isLightOn = true; // حالة الضوء، يبدأ مفعلًا
+    public Light controlledLight; 
+    private bool isLightOn = true; 
 
     void Update()
     {
-        // التبديل بين تشغيل وإيقاف الضوء عند الضغط على زر Q
+ 
         if (Input.GetKeyDown(KeyCode.Q))
         {
             ToggleLight();
@@ -19,7 +19,7 @@ public class LightControl : MonoBehaviour
         if (controlledLight != null)
         {
             isLightOn = !isLightOn;
-            controlledLight.enabled = isLightOn; // تشغيل أو إيقاف الضوء بناءً على الحالة
+            controlledLight.enabled = isLightOn; 
             Debug.Log("Light is " + (isLightOn ? "on" : "off"));
         }
         else
