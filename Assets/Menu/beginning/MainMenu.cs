@@ -3,40 +3,40 @@ using UnityEngine.UI;
 
 public class GameStartMenu : MonoBehaviour
 {
-    public GameObject startMenuUI; // واجهة المستخدم للمنيو
-    public GameObject[] gameComponents; // مكونات اللعبة التي سيتم تفعيلها عند بدء اللعبة
-    public Button startButton; // زر البداية
-    public Button exitButton; // زر الإغلاق
+    public GameObject startMenuUI; 
+    public GameObject[] gameComponents;  
+    public Button startButton;  
+    public Button exitButton;  
 
     void Start()
     {
-        // إظهار المنيو عند بدء اللعبة
+   
         startMenuUI.SetActive(true);
-        SetGameComponentsActive(false); // تعطيل مكونات اللعبة
-        Time.timeScale = 0f; // إيقاف الوقت لمنع أي حركات في اللعبة
+        SetGameComponentsActive(false); 
+        Time.timeScale = 0f; 
 
-        // إضافة الأحداث للأزرار
+         
         startButton.onClick.AddListener(StartGame);
         exitButton.onClick.AddListener(ExitGame);
     }
 
-    // وظيفة زر "Start"
+  
     public void StartGame()
     {
-        Debug.Log("Start button pressed"); // تحقق من الضغط على الزر
-        startMenuUI.SetActive(false); // إخفاء المنيو
-        SetGameComponentsActive(true); // تفعيل مكونات اللعبة
-        Time.timeScale = 1f; // استئناف الوقت
+        Debug.Log("Start button pressed");  
+        startMenuUI.SetActive(false);  
+        SetGameComponentsActive(true);  
+        Time.timeScale = 1f;  
     }
 
-    // وظيفة زر "Exit"
+    
     public void ExitGame()
     {
         Debug.Log("Game is exiting...");
-        Application.Quit(); // إغلاق اللعبة
+        Application.Quit(); 
     }
 
-    // تفعيل أو تعطيل مكونات اللعبة
+   
     private void SetGameComponentsActive(bool isActive)
     {
         foreach (GameObject component in gameComponents)
