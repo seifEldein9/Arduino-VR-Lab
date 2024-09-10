@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class FirstPersonController : MonoBehaviour
 {
-    public float speed = 5f;           // سرعة الحركة
+    public float speed = 15f;           // سرعة الحركة
     public float sensitivity = 2f;     // حساسية الماوس
     public float verticalLookLimit = 80f; // الحد الأقصى لتحريك الرأس عموديًا
 
