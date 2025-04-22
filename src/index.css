@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* تعيين صورة الخلفية */
+  background-image: url('../src/Assets/imgs/22-02.png'); /* اختر الصورة التي تريدها */
+  background-size: cover; /* يجعل الصورة تغطي كامل الشاشة */
+  background-position: center; /* يضع الصورة في المنتصف */
+  background-attachment: fixed; /* يجعل الصورة ثابتة عند التمرير */
+  background-repeat: no-repeat; /* يمنع تكرار الصورة */
+}
+
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

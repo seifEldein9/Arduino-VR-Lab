@@ -1,0 +1,120 @@
+/* Home.css */
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;  
+  color:  #ffffff;
+}
+.right-section {
+  width: 40%;  
+  position: absolute;  
+  top: 250px;
+  left: 150px;
+  height: 100%; 
+}
+.courses-section2 {
+  width: 35%;  
+  position: absolute; 
+  top:  10px; 
+  margin-right: 320px;
+  margin-top: 180px;
+  margin-bottom: 50px;
+}
+.download-button {
+  margin-top: 20px;
+  padding: 10px 40px;
+  border: 2px solid rgba(0, 123, 255, 0.5); 
+  background-color: rgba(0, 123, 255, 0.3); 
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, border 0.3s; 
+}
+.download-button:hover {
+  background-color: rgba(0, 123, 255, 0.6);
+  border-color: rgba(0, 123, 255, 0.8); 
+}
+.left-section {
+  left: 100px; 
+  right: 0;
+  top:  80px; 
+}
+.courses-section {
+  width: 1000px;
+  margin-top: 180px;
+  margin-bottom: 50px;
+}
+.courses-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+.course {
+  flex: 1 1 calc(33.33% - 20px);
+  max-width: 500px;
+  border: 3px solid #1987FE;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.course img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.course:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.course h3 {
+  font-size: 18px;
+  color: #333;
+}
+.course button {
+  background-color: #1987FE;
+  color: #fff;
+  border: none;
+  margin-top: -10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  font-size: 18px;
+
+}
+.course button:hover {
+  background-color: #1987FE;
+}
+.course:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.video-text-container {
+  display: flex;
+  align-items: center; /* محاذاة العناصر عموديًا */
+  justify-content: center; /* توسيط العناصر أفقيًا */
+  gap: 20px; /* مسافة بين الفيديو والنص */
+  margin-top: 50px;
+}
+
+.video-container {
+  flex: 1;
+  max-width: 600px;
+  border: 3px solid #1987FE;
+}
+
+.text-container {
+  flex: 1;
+  max-width: 400px;
+  font-size: 18px;
+
+}

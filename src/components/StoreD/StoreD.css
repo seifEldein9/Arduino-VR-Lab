@@ -1,0 +1,30 @@
+.product-detail-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+  color: #ffffff;
+}
+
+.product-detail-image {
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.product-detail-info {
+  max-width: 600px;
+}
+
+.product-detail-info h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.product-detail-price,
+.product-detail-status,
+.product-detail-location {
+  margin-bottom: 10px;
+  font-size: 18px;
+}

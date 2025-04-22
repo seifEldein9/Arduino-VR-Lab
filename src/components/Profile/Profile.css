@@ -1,0 +1,207 @@
+.profile-container6 {
+  background-color: var(--background2);
+  color: white;
+ 
+  text-align: center;
+}
+.profile-title {
+  font-size: 24px;
+ 
+ 
+
+}
+.nav-buttons2 {
+  display: flex;
+  justify-content: center;  
+  align-items: center;     
+  margin-bottom: 20px;
+  gap: 10px;  
+  width: 100%;  
+}
+
+.nav-buttons2 button {
+  padding: 10px 2.6ch;
+  font-family: 'Cairo', sans-serif;
+  border: none;
+  background-color: transparent;
+  color: #1987FE;
+  font-size: 0.8rem;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+.nav-buttons2 button.active {
+  background-color: var(--background2);
+  color: var(--foreground);
+}
+.nav-buttons2 .active-tab {
+  background: #1987FE;
+  color: white;
+}
+.content-section3 {
+  width: 80%;
+  margin: 0 auto;
+  background-color: var(--background2);
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.profile-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 1px solid #bbbbbb ;
+  border-radius: 10px;
+  width: 95%;
+  padding: 10px;
+}
+.profile-avatar {
+  width: 60px;
+  height: 60px;
+  background: #1987FE;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+.profile-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: -5px;
+}
+.profile-phone {
+  font-size: 14px;
+  color: var(--foreground);
+  margin: -5px;
+}
+.edit-form {
+  border: 1px solid #bbbbbb;
+  border-radius: 10px;
+  padding: 10px;
+  width: 95%;
+}
+.input-group {
+  text-align: right;
+  margin-bottom: 15px;
+  width: 45%;
+  
+}
+.horizontal-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; 
+  margin-bottom: 15px;
+  margin-right: 40px;
+}
+.horizontal-group .input-group {
+  width: 47%; 
+  
+  
+}
+.input-group:first-child {
+  margin-left: auto;  
+  margin-right: 40px;
+}
+.input-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  margin-right: -10px;
+}
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: var(--background2);
+  color: var(--foreground);
+
+  outline: none;
+}
+.input-group input:focus {
+  border-color: #1987FE;
+}
+.note {
+  font-size: 12px;
+  color: var(--foreground);
+
+  margin-right: 20px;
+  text-align: right;
+  margin-top: -10px;
+  margin-bottom: 15px;
+}
+.save-button {
+  background: #1987FE;
+  color: white;
+  padding: 5px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Cairo', sans-serif;
+}
+.save-button:hover {
+  background: #1987FE;
+}
+.insurance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  
+  gap: 10px;  
+  margin: 20px;
+}
+.insurance-card {
+  text-align: center;
+  padding: 15px;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  width: 80%;  
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.insurance-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.insurance-icon {
+  font-size: 40px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+.insurance-card p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
+}
+.insurance-image {
+  width: 80px; 
+  height: 80px;
+}
+.insurance-options ul {
+  list-style-type: none;
+  padding: 0;
+}
+.insurance-options li {
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  
+}
+.insurance-options h3 {
+  margin: 0 0 5px;
+}
+.insurance-options a {
+  text-decoration: none; 
+  color: inherit; 
+  display: block;  
+}
+.insurance-options li:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  
+}
